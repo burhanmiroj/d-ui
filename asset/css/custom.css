@@ -17,12 +17,9 @@ body {
 /* #main-sidebar::-webkit-scrollbar-track {
 
 } */
-#main-sidebar {
-  transition: all 300ms ease;
-}
 #main-sidebar::-webkit-scrollbar-thumb {
-  background-color: rgb(255, 255, 255);
-  border: 1px solid #fff;
+  background-color: rgb(243, 243, 243);
+  border: 1.5px solid rgba(255, 255, 255, 1);
   border-radius: 10px;
 }
 #main-sidebar:hover::-webkit-scrollbar-thumb {
@@ -32,6 +29,28 @@ body {
   background: rgb(185, 185, 185); 
 }
 
+body::-webkit-scrollbar {
+  width: 12px;
+  border-left: 1px solid rgb(231, 231, 231);
+}
+body::-webkit-scrollbar-thumb {
+  background: rgb(209, 209, 209); 
+  border: 2px solid rgb(241, 245, 249);
+  border-radius: 10px;
+}
+body:hover::-webkit-scrollbar-thumb {
+  background: rgb(209, 209, 209); 
+}
+body::-webkit-scrollbar-thumb:hover {
+  background: rgb(185, 185, 185); 
+}
+
 aside {
   min-width: 288px;
 }
+
+/* @media screen and (max-width: 365px) {
+  aside {
+    padding-bottom: 5rem !important;
+  }
+} */
