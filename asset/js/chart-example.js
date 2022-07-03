@@ -44,8 +44,6 @@ const dataBarOne = {
       data: [20, 10, 5, 2, 20, 30, 45],
       backgroundColor: [
         "rgb(133, 105, 241)",
-        "rgb(164, 101, 241)",
-        "rgb(101, 143, 241)",
       ],
     },
   ],
@@ -71,17 +69,13 @@ const dataBarTwo = {
       data: [20, 10, 5, 2, 20, 30, 45],
       backgroundColor: [
         "rgb(133, 105, 241)",
-        "rgb(164, 101, 241)",
-        "rgb(101, 143, 241)",
       ],
     },
     {
       label: "Second Dataset",
       data: [30, 20, 30, 20, 5, 45, 50],
       backgroundColor: [
-        "rgb(133, 105, 241)",
-        "rgb(164, 101, 241)",
-        "rgb(101, 143, 241)",
+        "rgb(34, 197, 94)"
       ],
     },
   ],

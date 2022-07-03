@@ -418,10 +418,10 @@
             </div>
             <!-- CHARTJS -->
             <div class="w-full px-3 md:px-5">
-                <div class="max-w-screen-xl mx-auto grid grid-cols-1 lg:grid-cols-6 gap-5">
+                <div class="max-w-screen-xl mx-auto grid grid-cols-1 xl:grid-cols-6 gap-5">
 
                     <!-- LINE CHART -->
-                    <div class="col-span-1 lg:col-span-4 shadow-lg rounded-lg overflow-hidden bg-white">
+                    <div class="col-span-1 xl:col-span-4 shadow-lg rounded-lg overflow-hidden bg-white">
                         <!-- HEADER -->
                         <div class="w-full p-5 pb-0 flex justify-between items-center">
                             <div>
@@ -461,14 +461,91 @@
                     </div>
 
                     <!-- RIGHT CONTENT -->
-                    <div class="col-span-1 lg:col-span-2 shadow-lg rounded-lg overflow-hidden bg-white">
-                        <div class="w-full p-5">
-                            COMING SOON
+                    <div class="col-span-1 xl:col-span-2 shadow-lg rounded-lg overflow-hidden bg-white">
+                        <!-- HEADER -->
+                        <div class="w-full p-5 pb-0 flex justify-between items-center">
+                            <div>
+                                <h2 class="text-lg font-medium">User</h2>
+                                <p class="text-sm text-slate-500">See weekday registered user</p>
+                            </div>
+                            <div class="inline-block relative" x-data="{ chartTwoMenu: false }">
+                                <div class="relative z-0">
+                                    <button @click="chartTwoMenu = !chartTwoMenu" class="w-full transition-all duration-300 hover:bg-slate-100 p-2 rounded-full">
+                                        <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" preserveAspectRatio="xMidYMid meet" viewBox="0 0 16 16"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><circle cx="8" cy="2.5" r=".75"/><circle cx="8" cy="8" r=".75"/><circle cx="8" cy="13.5" r=".75"/></g></svg>
+                                    </button>
+                                </div>
+                        
+                                <ul @click.away="chartTwoMenu = false" x-show="chartTwoMenu" class="bg-white border text-slate-500 py-2 text-sm flex flex-col absolute transform origin-top-right right-0 mx-auto w-56 rounded shadow-lg mt-5"
+                                    x-transition:enter="transition ease-out duration-100"
+                                    x-transition:enter-start="opacity-0 transform opacity-50 scale-50"
+                                    x-transition:enter-end="opacity-100 transform opacity-100 scale-100"
+                                    x-transition:leave="transition ease-in duration-200"
+                                    x-transition:leave-end="opacity-0 transform opacity-0 scale-50"
+                                >
+                                    <li @click="chartTwoMenu = false" class="px-2">
+                                        <form action="#">
+                                            <button type="submit" class="rounded-md p-2 hover:bg-slate-100 flex items-center w-full">
+                                                <div class="w-7 h-7 rounded-full flex items-center justify-center bg-blue-300">
+                                                    <svg class="w-4 h-4 text-blue-800" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M12 22v-9m0 9l-2.5-2m2.5 2l2.5-2M5.034 9.117A4.002 4.002 0 0 0 6 17h1"/><path d="M15.83 7.138a5.5 5.5 0 0 0-10.796 1.98S5.187 10 5.5 10.5"/><path d="M17 17a5 5 0 1 0-1.17-9.862L14.5 7.5"/></g></svg>
+                                                </div>
+                                                <div class="flex flex-col justify-center ml-2">
+                                                    <span class="font-medium">Generate PDF report</span>
+                                                </div>
+                                            </button>
+                                        </form>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
+                        <ul class="w-full mt-5">
+                            <li class="border-b px-5">
+                                <a href="#" class="rounded-md py-3 hover:text-slate-500 flex items-center space-x-3">
+                                    <div class="w-9 h-9 rounded-full bg-slate-500 shadow-md"></div>
+                                    <div class="flex flex-col justify-center">
+                                        <span class="font-medium text-sm">Armand</span>
+                                        <span class="text-xs">Registered at Jun 02 2022</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="border-b px-5">
+                                <a href="#" class="rounded-md py-3 hover:text-slate-500 flex items-center space-x-3">
+                                    <div class="w-9 h-9 rounded-full bg-slate-500 shadow-md"></div>
+                                    <div class="flex flex-col justify-center">
+                                        <span class="font-medium text-sm">Mr Han</span>
+                                        <span class="text-xs">Registered at Jun 02 2022</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="border-b px-5">
+                                <a href="#" class="rounded-md py-3 hover:text-slate-500 flex items-center space-x-3">
+                                    <div class="w-9 h-9 rounded-full bg-slate-500 shadow-md"></div>
+                                    <div class="flex flex-col justify-center">
+                                        <span class="font-medium text-sm">Mr John</span>
+                                        <span class="text-xs">Registered at Jun 02 2022</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="border-b px-5">
+                                <a href="#" class="rounded-md py-3 hover:text-slate-500 flex items-center space-x-3">
+                                    <div class="w-9 h-9 rounded-full bg-slate-500 shadow-md"></div>
+                                    <div class="flex flex-col justify-center">
+                                        <span class="font-medium text-sm">Stephen</span>
+                                        <span class="text-xs">Registered at Jun 01 2022</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <!--  -->
+                            <li class="p-6">
+                                <a href="#" class="text-sm inline-flex items-center text-white transition-all duration-300 bg-purple-500 hover:bg-purple-700 px-4 py-2 rounded-md">
+                                    <span>See more</span>
+                                    <svg class="w-4 h-4 ml-2" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" preserveAspectRatio="xMidYMid meet" viewBox="0 0 16 16"><path fill="currentColor" fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/></svg>
+                                </a>
+                            </li>
+                        </ul>
                     </div>
                     
                     <!-- SINGLE BAR CHART -->
-                    <div class="col-span-1 lg:col-span-3 shadow-lg rounded-lg overflow-hidden bg-white">
+                    <div class="col-span-1 xl:col-span-3 shadow-lg rounded-lg overflow-hidden bg-white">
                         <!-- HEADER -->
                         <div class="w-full p-5 pb-0 flex justify-between items-center">
                             <div>
@@ -508,7 +585,7 @@
                     </div>
                     
                     <!-- DOUBLE BAR CHART -->
-                    <div class="col-span-1 lg:col-span-3 shadow-lg rounded-lg overflow-hidden bg-white">
+                    <div class="col-span-1 xl:col-span-3 shadow-lg rounded-lg overflow-hidden bg-white">
                         <!-- HEADER -->
                         <div class="w-full p-5 pb-0 flex justify-between items-center">
                             <div>
