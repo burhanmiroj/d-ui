@@ -1,6 +1,9 @@
 body {
     font-family: 'Poppins', sans-serif;
 }
+.max-w-screen-custom {
+  max-width: 1150px;
+}
 
 /* SIDEBAR MENU HOVER */
 #sidebar-menu ul li a, #sidebar-menu ul li button {
