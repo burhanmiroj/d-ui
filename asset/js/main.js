@@ -29,3 +29,16 @@ tippy("#version", {
   allowHTML: true,
   placement: "auto",
 });
+
+document.onreadystatechange = function () {
+    if (document.readyState !== "complete") {
+      document.querySelector("body").style.visibility = "hidden";
+      document.querySelector("#loader").style.visibility = "visible";
+    } else {
+      // LOADED content after page is rendered : 1500ms
+      setTimeout(() => {
+        document.querySelector("#loader").style.display = "none";
+      }, 1500);
+      document.querySelector("body").style.visibility = "visible";
+    }
+};
