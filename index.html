@@ -7,7 +7,7 @@
     <title>D-UI - Admin dashboard template</title>
     <!-- TAILWIND CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="./asset/css/custom.css">
+    <link rel="stylesheet" href="/asset/css/custom.css">
     <!--  -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,6 +19,11 @@
     <script src="https://unpkg.com/tippy.js@6"></script>
 </head>
 <body class="bg-slate-100">
+    <!-- LOADER -->
+    <div id="loader" class="w-full h-screen bg-white fixed inset-0 z-50 flex items-center justify-center">
+        <img src="/asset/logo.svg" class="animate-bounce" alt="">
+    </div>
+    <!-- LOADER -->
     <div class="w-full flex">
         <!-- MOBILE SIDEBAR CLOSER -->
         <div id="sidebar-closer" class="w-full h-screen fixed z-30 inset-0 bg-slate-900 bg-opacity-50 hidden lg:hidden"></div>
@@ -39,14 +44,14 @@
                         <li class="uppercase font-medium text-slate-300 text-xs tracking-wide mb-6">Admin Menu</li>
                         <!-- SINGLE MENU -->
                         <li class="relative text-sm">
-                            <a href="#" class="flex items-center py-2.5">
-                                <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="currentColor" d="M19 5v2h-4V5h4M9 5v6H5V5h4m10 8v6h-4v-6h4M9 17v2H5v-2h4M21 3h-8v6h8V3zM11 3H3v10h8V3zm10 8h-8v10h8V11zm-10 4H3v6h8v-6z"/></svg>
-                                <span class="ml-3 text-sm">Dashboard</span>
+                            <a href="/" class="flex items-center py-2.5">
+                                <svg class="w-6 h-6 text-purple-500" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="currentColor" d="M19 5v2h-4V5h4M9 5v6H5V5h4m10 8v6h-4v-6h4M9 17v2H5v-2h4M21 3h-8v6h8V3zM11 3H3v10h8V3zm10 8h-8v10h8V11zm-10 4H3v6h8v-6z"/></svg>
+                                <span class="ml-3 text-sm text-purple-500">Dashboard</span>
                             </a>
                         </li>
                         <!-- SINGLE MENU -->
                         <li class="relative text-sm">
-                            <a href="#" class="flex items-center py-2.5">
+                            <a href="/pages/documentation.html" class="flex items-center py-2.5">
                                 <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="currentColor" d="M15 4H6v16h12V7h-3V4ZM6 2h10l4 4v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2Zm2 9h8v2H8v-2Zm0 4h8v2H8v-2Z"/></svg>
                                 <span class="ml-3 text-sm">Documentation</span>
                             </a>
@@ -179,14 +184,14 @@
                         <li class="uppercase font-medium text-slate-300 text-xs tracking-wide mb-6">Pages</li>
                         <!-- SINGLE MENU -->
                         <li class="relative text-sm">
-                            <a href="#" class="flex items-center">
+                            <a href="/pages/login.html" class="flex items-center">
                                 <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="currentColor" d="M9.325 16.275q-.275-.325-.275-.738q0-.412.275-.687l1.85-1.85H4q-.425 0-.712-.288Q3 12.425 3 12t.288-.713Q3.575 11 4 11h7.175l-1.85-1.85q-.3-.3-.3-.712q0-.413.3-.713q.275-.3.688-.3q.412 0 .687.275l3.6 3.6q.15.15.213.325q.062.175.062.375t-.062.375q-.063.175-.213.325l-3.6 3.6q-.3.3-.7.275q-.4-.025-.675-.3ZM13 21q-.425 0-.712-.288Q12 20.425 12 20t.288-.712Q12.575 19 13 19h6V5h-6q-.425 0-.712-.288Q12 4.425 12 4t.288-.713Q12.575 3 13 3h6q.825 0 1.413.587Q21 4.175 21 5v14q0 .825-.587 1.413Q19.825 21 19 21Z"/></svg>
                                 <span class="ml-3 text-sm">Login</span>
                             </a>
                         </li>
                         <!-- SINGLE MENU -->
                         <li class="relative text-sm mt-4">
-                            <a href="#" class="flex items-center">
+                            <a href="/pages/register.html" class="flex items-center">
                                 <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="currentColor" d="M5.75 3A2.75 2.75 0 0 0 3 5.75v12.5A2.75 2.75 0 0 0 5.75 21h6.272a6.471 6.471 0 0 1-.709-1.5H5.75c-.69 0-1.25-.56-1.25-1.25V5.75c0-.69.56-1.25 1.25-1.25h12.5c.69 0 1.25.56 1.25 1.25v5.563a6.471 6.471 0 0 1 1.5.709V5.75A2.75 2.75 0 0 0 18.25 3H5.75Zm12.207 8.016a.749.749 0 0 0-.703-1.014H12.25a.75.75 0 0 0 0 1.5h2.742a6.48 6.48 0 0 1 2.965-.486ZM8.25 8.502a2.25 2.25 0 1 0 0 4.5a2.25 2.25 0 0 0 0-4.5Zm-.75 2.25a.75.75 0 1 1 1.5 0a.75.75 0 0 1-1.5 0ZM6 16.25a2.25 2.25 0 1 1 4.5 0a2.25 2.25 0 0 1-4.5 0Zm2.25-.75a.75.75 0 1 0 0 1.5a.75.75 0 0 0 0-1.5Zm9.004-8h-10.5a.75.75 0 1 1 0-1.5h10.5a.75.75 0 0 1 0 1.5ZM23 17.5a5.5 5.5 0 1 0-11 0a5.5 5.5 0 0 0 11 0Zm-4.999 3.003a.5.5 0 1 1-1 0V18h-2.505a.5.5 0 1 1 0-1H17v-2.5a.5.5 0 1 1 1 0V17h2.503a.5.5 0 1 1 0 1h-2.502v2.503Z"/></svg>
                                 <span class="ml-3 text-sm">Register</span>
                             </a>
@@ -204,13 +209,13 @@
                             <div class="relative overflow-hidden transition-all max-h-0 duration-600" x-ref="container6" x-bind:style="selected == 6 ? 'max-height: ' + $refs.container6.scrollHeight + 'px' : ''">
                                 <ul class="py-3 border rounded-md text-slate-500 flex flex-col space-y-3 px-4">
                                     <li @click="selected = false" class="transition-all duration-300 transform hover:translate-x-1 flex w-full">
-                                        <a href="#">403</a>
+                                        <a href="/pages/error/403.html">403</a>
                                     </li>
                                     <li @click="selected = false" class="transition-all duration-300 transform hover:translate-x-1 flex w-full">
-                                        <a href="#">404</a>
+                                        <a href="/pages/error/404.html">404</a>
                                     </li>
                                     <li @click="selected = false" class="transition-all duration-300 transform hover:translate-x-1 flex w-full">
-                                        <a href="#">500</a>
+                                        <a href="/pages/error/500.html">500</a>
                                     </li>
                                 </ul>
                             </div>
@@ -300,7 +305,7 @@
                         <div class="flex items-center">
                             <div class="inline-block relative" x-data="{ dropdownProfile: false }">
                                 <button @click="dropdownProfile = !dropdownProfile" class="focus:outline-none shadow cursor-pointer flex border rounded-full" :class="{ 'shadow-none border-indigo-300': dropdownProfile}">
-                                    <img class="w-9 h-9 hover:ring-2 ring-slate-300 rounded-full" src="./asset/profile-example.png" alt="">
+                                    <img class="w-9 h-9 hover:ring-2 ring-slate-300 rounded-full" src="/asset/profile-example.png" alt="">
                                 </button>
                         
                                 <ul @click.away="dropdownProfile = false" x-show="dropdownProfile" class="bg-white text-slate-500 text-sm flex flex-col absolute transform origin-top-right right-0 w-72 p-2 rounded shadow-lg mt-5"
@@ -503,7 +508,7 @@
                                     <div class="w-9 h-9 rounded-full bg-slate-500 shadow-md"></div>
                                     <div class="flex flex-col justify-center">
                                         <span class="font-medium text-sm">Armand</span>
-                                        <span class="text-xs">Registered at Jun 02 2022</span>
+                                        <span class="text-xs text-slate-500">Registered at Jun 02 2022</span>
                                     </div>
                                 </a>
                             </li>
@@ -512,7 +517,7 @@
                                     <div class="w-9 h-9 rounded-full bg-slate-500 shadow-md"></div>
                                     <div class="flex flex-col justify-center">
                                         <span class="font-medium text-sm">Mr Han</span>
-                                        <span class="text-xs">Registered at Jun 02 2022</span>
+                                        <span class="text-xs text-slate-500">Registered at Jun 02 2022</span>
                                     </div>
                                 </a>
                             </li>
@@ -521,7 +526,7 @@
                                     <div class="w-9 h-9 rounded-full bg-slate-500 shadow-md"></div>
                                     <div class="flex flex-col justify-center">
                                         <span class="font-medium text-sm">Mr John</span>
-                                        <span class="text-xs">Registered at Jun 02 2022</span>
+                                        <span class="text-xs text-slate-500">Registered at Jun 02 2022</span>
                                     </div>
                                 </a>
                             </li>
@@ -530,13 +535,13 @@
                                     <div class="w-9 h-9 rounded-full bg-slate-500 shadow-md"></div>
                                     <div class="flex flex-col justify-center">
                                         <span class="font-medium text-sm">Stephen</span>
-                                        <span class="text-xs">Registered at Jun 01 2022</span>
+                                        <span class="text-xs text-slate-500">Registered at Jun 01 2022</span>
                                     </div>
                                 </a>
                             </li>
                             <!--  -->
                             <li class="p-6">
-                                <a href="#" class="text-sm inline-flex items-center text-white transition-all duration-300 bg-purple-500 hover:bg-purple-700 px-4 py-2 rounded-md">
+                                <a href="#" class="icon-button text-sm inline-flex items-center text-white transition-all duration-300 bg-purple-500 hover:bg-purple-700 px-4 py-2 rounded-md">
                                     <span>See more</span>
                                     <svg class="w-4 h-4 ml-2" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" preserveAspectRatio="xMidYMid meet" viewBox="0 0 16 16"><path fill="currentColor" fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/></svg>
                                 </a>
@@ -626,8 +631,10 @@
 
                 </div>
             </div>
-            <!--  -->
-            <div class="w-full h-screen"></div>
+            <!-- FOOTER -->
+            <footer class="w-full p-5 mt-5 border-t text-slate-500 text-sm">
+                <p>Copyright &copy;2022 D-UI, All rights reserved</p>
+            </footer>
         </main>
         <!-- START : MAIN CONTENT -->
     </div>
@@ -635,7 +642,7 @@
     <!--  -->
     <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.8.0/chart.min.js" integrity="sha512-sW/w8s4RWTdFFSduOTGtk4isV1+190E/GghVffMA9XczdJ2MDzSzLEubKAs5h0wzgSJOQTRYyaz73L3d6RtJSg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="./asset/js/main.js"></script>
-    <script src="./asset/js/chart-example.js"></script>
+    <script src="/asset/js/main.js"></script>
+    <script src="/asset/js/chart-example.js"></script>
 </body>
 </html>
