@@ -17,7 +17,8 @@ const togglePassword = document.querySelector('#toggle-password')
 const hidePassword = togglePassword.querySelector('.password')
 const showPassword = togglePassword.querySelector('.text')
             
-togglePassword.addEventListener('click', function() {
+togglePassword.addEventListener('click', function(event) {
+    event.preventDefault()
 
     if(inputPassword.getAttribute('type') === "password") {
         inputPassword.setAttribute('type', 'text')
