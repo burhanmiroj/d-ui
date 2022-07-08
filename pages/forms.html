@@ -137,8 +137,8 @@
                         <!-- SINGLE MENU -->
                         <li class="relative text-sm">
                             <a href="/pages/login.html" class="flex items-center">
-                                <svg class="w-6 h-6 text-purple-500" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="currentColor" d="M9.325 16.275q-.275-.325-.275-.738q0-.412.275-.687l1.85-1.85H4q-.425 0-.712-.288Q3 12.425 3 12t.288-.713Q3.575 11 4 11h7.175l-1.85-1.85q-.3-.3-.3-.712q0-.413.3-.713q.275-.3.688-.3q.412 0 .687.275l3.6 3.6q.15.15.213.325q.062.175.062.375t-.062.375q-.063.175-.213.325l-3.6 3.6q-.3.3-.7.275q-.4-.025-.675-.3ZM13 21q-.425 0-.712-.288Q12 20.425 12 20t.288-.712Q12.575 19 13 19h6V5h-6q-.425 0-.712-.288Q12 4.425 12 4t.288-.713Q12.575 3 13 3h6q.825 0 1.413.587Q21 4.175 21 5v14q0 .825-.587 1.413Q19.825 21 19 21Z"/></svg>
-                                <span class="ml-3 text-sm text-purple-500">Login</span>
+                                <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="currentColor" d="M9.325 16.275q-.275-.325-.275-.738q0-.412.275-.687l1.85-1.85H4q-.425 0-.712-.288Q3 12.425 3 12t.288-.713Q3.575 11 4 11h7.175l-1.85-1.85q-.3-.3-.3-.712q0-.413.3-.713q.275-.3.688-.3q.412 0 .687.275l3.6 3.6q.15.15.213.325q.062.175.062.375t-.062.375q-.063.175-.213.325l-3.6 3.6q-.3.3-.7.275q-.4-.025-.675-.3ZM13 21q-.425 0-.712-.288Q12 20.425 12 20t.288-.712Q12.575 19 13 19h6V5h-6q-.425 0-.712-.288Q12 4.425 12 4t.288-.713Q12.575 3 13 3h6q.825 0 1.413.587Q21 4.175 21 5v14q0 .825-.587 1.413Q19.825 21 19 21Z"/></svg>
+                                <span class="ml-3 text-sm">Login</span>
                             </a>
                         </li>
                         <!-- SINGLE MENU -->
@@ -161,7 +161,7 @@
                             <div class="relative overflow-hidden transition-all max-h-0 duration-600" x-ref="container6" x-bind:style="selected == 6 ? 'max-height: ' + $refs.container6.scrollHeight + 'px' : ''">
                                 <ul class="py-3 border rounded-md text-slate-500 flex flex-col space-y-3 px-4">
                                     <li @click="selected = false" class="transition-all duration-300 transform hover:translate-x-1 flex w-full">
-                                        <a href="/pages/error/403.html">403</a>
+                                        <a class="text-purple-500" href="/pages/error/403.html">403</a>
                                     </li>
                                     <li @click="selected = false" class="transition-all duration-300 transform hover:translate-x-1 flex w-full">
                                         <a href="/pages/error/404.html">404</a>
@@ -284,27 +284,88 @@
                 <div class="max-w-screen-xl mx-auto">
                     <div class="py-3 md:py-5 flex justify-between">
                         <div>
-                            <p class="text-sm font-medium text-slate-500">Login</p>
-                            <h1 class="text-slate-900 text-xl">Login forms components</h1>
+                            <p class="text-sm font-medium text-slate-500">Form components</p>
+                            <h1 class="text-slate-900 text-xl">Example form components</h1>
                         </div>
                     </div>
                     <!-- CONTENT -->
                     <div class="w-full bg-white rounded-md p-5">
-                        <!-- LOGIN v1 -->
-                        <div class="w-full">
-                            <div class="w-full flex justify-between items-center">
-                                <div class="w-full">
-                                    <h3 class="font-medium text-lg">Login forms</h3>
-                                    <p class="text-slate-500 text-sm">Login forms v1 - <span class="px-2 py-1 bg-green-100 text-green-700 text-xs rounded-full">PNG Preview</span></p>
-                                </div>
-                                <div class="flex items-center pt-5">
-                                    <a href="/pages/auth-v1/login.html" title="View page" class="w-10 h-10 rounded-md transition-all duration-300 bg-purple-500 hover:bg-purple-700 flex items-center justify-center">
-                                        <svg class="w-5 h-5 text-white" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M21.257 10.962c.474.62.474 1.457 0 2.076C19.764 14.987 16.182 19 12 19c-4.182 0-7.764-4.013-9.257-5.962a1.692 1.692 0 0 1 0-2.076C4.236 9.013 7.818 5 12 5c4.182 0 7.764 4.013 9.257 5.962Z"/><circle cx="12" cy="12" r="3"/></g></svg>
-                                    </a>
+                        <!-- INPUT -->
+                        <div class="w-full flex flex-col space-y-4">
+                            <div class="w-full">
+                                <h1 class="text-lg md:text-xl font-medium">Single input</h1>
+                                <p class="text-slate-500 text-sm">Example single input components</p>
+                            </div>
+                            <!-- TEXT INPUT -->
+                            <div class="w-full">
+                                <label for="username" class="text-xs uppercase font-medium text-slate-400">Username</label>
+                                <input type="text" name="" id="username" placeholder="Input username" class="w-full mt-1 text-sm px-5 py-3 rounded-md focus:outline-none border border-slate-300 text-slate-700 transition-all duration-300 focus:shadow-sm focus:border-purple-500 focus:ring-2 focus:ring-purple-200">
+                            </div>
+                            <!-- EMAIL INPUT -->
+                            <div class="w-full">
+                                <label for="email" class="text-xs uppercase font-medium text-slate-400">Email</label>
+                                <input type="email" name="" id="email" placeholder="example@email.com" class="w-full mt-1 text-sm px-5 py-3 rounded-md focus:outline-none border border-slate-300 text-slate-700 transition-all duration-300 focus:shadow-sm focus:border-purple-500 focus:ring-2 focus:ring-purple-200">
+                            </div>
+                            <!-- PASSWORD INPUT -->
+                            <div class="w-full">
+                                <label for="password" class="text-xs uppercase font-medium text-slate-400">Password</label>
+                                <div id="input-password" class="relative text-slate-400 focus-within:text-purple-500">
+                                    <input type="password" name="" id="password" placeholder="Input your password" class="w-full mt-1 text-sm px-5 py-3 rounded-md focus:outline-none border border-slate-300 text-slate-700 transition-all duration-300 focus:shadow-sm focus:border-purple-500 focus:ring-2 focus:ring-purple-200">
                                 </div>
                             </div>
-                            <div class="w-full shadow-xl md:shadow-2xl relative rounded-lg overflow-hidden mt-5">
-                                <img src="/asset/img/preview/login.png" alt="">
+                        </div>
+                        <!-- BUTTON -->
+                        <div class="w-full flex flex-col space-y-4 mt-10 border-t pt-8">
+                            <div class="w-full">
+                                <h1 class="text-lg md:text-xl font-medium">Button</h1>
+                                <p class="text-slate-500 text-sm">Button components - <span class="text-sm text-red-500">Fixed width button</span></p>
+                            </div>
+                            <div class="w-full flex space-x-3">
+                                <!-- SINGLE BUTTON -->
+                                <button class="w-44 h-12 rounded-md text-sm font-medium transition-all duration-300 bg-gradient-to-tr from-purple-500 to-purple-700 hover:from-purple-600 hover:to-purple-700 focus:ring-2 focus:ring-purple-300 text-white active:text-purple-300 flex justify-center items-center">
+                                    Single button
+                                </button>
+                                <!-- SINGLE BUTTON -->
+                                <button class="w-44 h-12 rounded-md text-sm font-medium transition-all duration-300 bg-gradient-to-tr from-purple-500 to-purple-700 hover:from-purple-600 hover:to-purple-700 focus:ring-2 focus:ring-purple-300 text-white active:text-purple-300 flex justify-center items-center">
+                                    <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="currentColor" d="M10 18a7.952 7.952 0 0 0 4.897-1.688l4.396 4.396l1.414-1.414l-4.396-4.396A7.952 7.952 0 0 0 18 10c0-4.411-3.589-8-8-8s-8 3.589-8 8s3.589 8 8 8zm0-14c3.309 0 6 2.691 6 6s-2.691 6-6 6s-6-2.691-6-6s2.691-6 6-6z"/><path fill="currentColor" d="M11.412 8.586c.379.38.588.882.588 1.414h2a3.977 3.977 0 0 0-1.174-2.828c-1.514-1.512-4.139-1.512-5.652 0l1.412 1.416c.76-.758 2.07-.756 2.826-.002z"/></svg>
+                                    <span class="ml-2">Icon button</span>
+                                </button>
+                            </div>
+                        </div>
+                        <!-- BUTTON -->
+                        <div class="w-full flex flex-col space-y-4 mt-10 border-t pt-8">
+                            <div class="w-full">
+                                <h1 class="text-lg md:text-xl font-medium">Button</h1>
+                                <p class="text-slate-500 text-sm">Responsive fullwidth button components - <span class="text-sm text-red-500">Example : login form compoonent</span></p>
+                            </div>
+                            <div class="w-full grid grid-cols-2 gap-3">
+                                <!-- SINGLE BUTTON -->
+                                <button class="w-full max-w-xs h-12 rounded-md text-sm font-medium transition-all duration-300 bg-gradient-to-tr from-purple-500 to-purple-700 hover:from-purple-600 hover:to-purple-700 focus:ring-2 focus:ring-purple-300 text-white active:text-purple-300 flex justify-center items-center">
+                                    XS Button
+                                </button>
+                                <!-- SINGLE BUTTON WITH ICON -->
+                                <button class="w-full max-w-xs h-12 rounded-md text-sm font-medium transition-all duration-300 bg-gradient-to-tr from-purple-500 to-purple-700 hover:from-purple-600 hover:to-purple-700 focus:ring-2 focus:ring-purple-300 text-white active:text-purple-300 flex justify-center items-center">
+                                    <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="currentColor" d="M10 18a7.952 7.952 0 0 0 4.897-1.688l4.396 4.396l1.414-1.414l-4.396-4.396A7.952 7.952 0 0 0 18 10c0-4.411-3.589-8-8-8s-8 3.589-8 8s3.589 8 8 8zm0-14c3.309 0 6 2.691 6 6s-2.691 6-6 6s-6-2.691-6-6s2.691-6 6-6z"/><path fill="currentColor" d="M11.412 8.586c.379.38.588.882.588 1.414h2a3.977 3.977 0 0 0-1.174-2.828c-1.514-1.512-4.139-1.512-5.652 0l1.412 1.416c.76-.758 2.07-.756 2.826-.002z"/></svg>
+                                    <span class="ml-2">XS Button</span>
+                                </button>
+                                <!-- SINGLE BUTTON -->
+                                <button class="w-full max-w-sm h-12 rounded-md text-sm font-medium transition-all duration-300 bg-gradient-to-tr from-purple-500 to-purple-700 hover:from-purple-600 hover:to-purple-700 focus:ring-2 focus:ring-purple-300 text-white active:text-purple-300 flex justify-center items-center">
+                                    SM Button
+                                </button>
+                                <!-- SINGLE BUTTON WITH ICON -->
+                                <button class="w-full max-w-sm h-12 rounded-md text-sm font-medium transition-all duration-300 bg-gradient-to-tr from-purple-500 to-purple-700 hover:from-purple-600 hover:to-purple-700 focus:ring-2 focus:ring-purple-300 text-white active:text-purple-300 flex justify-center items-center">
+                                    <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="currentColor" d="M10 18a7.952 7.952 0 0 0 4.897-1.688l4.396 4.396l1.414-1.414l-4.396-4.396A7.952 7.952 0 0 0 18 10c0-4.411-3.589-8-8-8s-8 3.589-8 8s3.589 8 8 8zm0-14c3.309 0 6 2.691 6 6s-2.691 6-6 6s-6-2.691-6-6s2.691-6 6-6z"/><path fill="currentColor" d="M11.412 8.586c.379.38.588.882.588 1.414h2a3.977 3.977 0 0 0-1.174-2.828c-1.514-1.512-4.139-1.512-5.652 0l1.412 1.416c.76-.758 2.07-.756 2.826-.002z"/></svg>
+                                    <span class="ml-2">SM Button</span>
+                                </button>
+                                <!-- SINGLE BUTTON -->
+                                <button class="w-full max-w-md h-12 rounded-md text-sm font-medium transition-all duration-300 bg-gradient-to-tr from-purple-500 to-purple-700 hover:from-purple-600 hover:to-purple-700 focus:ring-2 focus:ring-purple-300 text-white active:text-purple-300 flex justify-center items-center">
+                                    MD Button
+                                </button>
+                                <!-- SINGLE BUTTON WITH ICON -->
+                                <button class="w-full max-w-mdxs h-12 rounded-md text-sm font-medium transition-all duration-300 bg-gradient-to-tr from-purple-500 to-purple-700 hover:from-purple-600 hover:to-purple-700 focus:ring-2 focus:ring-purple-300 text-white active:text-purple-300 flex justify-center items-center">
+                                    <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="currentColor" d="M10 18a7.952 7.952 0 0 0 4.897-1.688l4.396 4.396l1.414-1.414l-4.396-4.396A7.952 7.952 0 0 0 18 10c0-4.411-3.589-8-8-8s-8 3.589-8 8s3.589 8 8 8zm0-14c3.309 0 6 2.691 6 6s-2.691 6-6 6s-6-2.691-6-6s2.691-6 6-6z"/><path fill="currentColor" d="M11.412 8.586c.379.38.588.882.588 1.414h2a3.977 3.977 0 0 0-1.174-2.828c-1.514-1.512-4.139-1.512-5.652 0l1.412 1.416c.76-.758 2.07-.756 2.826-.002z"/></svg>
+                                    <span class="ml-2">MD Button</span>
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -321,5 +382,6 @@
     <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.8.0/chart.min.js" integrity="sha512-sW/w8s4RWTdFFSduOTGtk4isV1+190E/GghVffMA9XczdJ2MDzSzLEubKAs5h0wzgSJOQTRYyaz73L3d6RtJSg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="/asset/js/main.js"></script>
+    <script src="/asset/js/auth.js"></script>
 </body>
 </html>

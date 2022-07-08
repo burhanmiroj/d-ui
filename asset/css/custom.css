@@ -64,3 +64,26 @@ aside {
 .icon-button:hover svg {
   transform: translateX(3px);
 }
+
+/*  */
+#table-component::-webkit-scrollbar {
+  height: 8px;
+  /* background: rgb(209, 209, 209);  */
+}
+#table-component::-webkit-scrollbar-thumb {
+  background: rgb(209, 209, 209); 
+  border: 2px solid rgb(241, 245, 249);
+  border-radius: 10px;
+}
+/* #table-component:hover::-webkit-scrollbar-thumb {
+  background: rgb(209, 209, 209); 
+}
+#table-component::-webkit-scrollbar-thumb:hover {
+  background: rgb(185, 185, 185); 
+} */
+
+@media screen and (min-width: 365px) {
+  .table-fixed {
+    width: 100%;
+  }
+}

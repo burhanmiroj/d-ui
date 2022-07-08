@@ -38,7 +38,8 @@ document.onreadystatechange = function () {
       // LOADED content after page is rendered : 1500ms
       setTimeout(() => {
         document.querySelector("#loader").style.display = "none";
-      }, 1500);
+      // }, 1500); // PRODUCTION
+      }, 100); // DEVELOPMENT
       document.querySelector("body").style.visibility = "visible";
     }
 };

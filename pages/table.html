@@ -137,8 +137,8 @@
                         <!-- SINGLE MENU -->
                         <li class="relative text-sm">
                             <a href="/pages/login.html" class="flex items-center">
-                                <svg class="w-6 h-6 text-purple-500" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="currentColor" d="M9.325 16.275q-.275-.325-.275-.738q0-.412.275-.687l1.85-1.85H4q-.425 0-.712-.288Q3 12.425 3 12t.288-.713Q3.575 11 4 11h7.175l-1.85-1.85q-.3-.3-.3-.712q0-.413.3-.713q.275-.3.688-.3q.412 0 .687.275l3.6 3.6q.15.15.213.325q.062.175.062.375t-.062.375q-.063.175-.213.325l-3.6 3.6q-.3.3-.7.275q-.4-.025-.675-.3ZM13 21q-.425 0-.712-.288Q12 20.425 12 20t.288-.712Q12.575 19 13 19h6V5h-6q-.425 0-.712-.288Q12 4.425 12 4t.288-.713Q12.575 3 13 3h6q.825 0 1.413.587Q21 4.175 21 5v14q0 .825-.587 1.413Q19.825 21 19 21Z"/></svg>
-                                <span class="ml-3 text-sm text-purple-500">Login</span>
+                                <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="currentColor" d="M9.325 16.275q-.275-.325-.275-.738q0-.412.275-.687l1.85-1.85H4q-.425 0-.712-.288Q3 12.425 3 12t.288-.713Q3.575 11 4 11h7.175l-1.85-1.85q-.3-.3-.3-.712q0-.413.3-.713q.275-.3.688-.3q.412 0 .687.275l3.6 3.6q.15.15.213.325q.062.175.062.375t-.062.375q-.063.175-.213.325l-3.6 3.6q-.3.3-.7.275q-.4-.025-.675-.3ZM13 21q-.425 0-.712-.288Q12 20.425 12 20t.288-.712Q12.575 19 13 19h6V5h-6q-.425 0-.712-.288Q12 4.425 12 4t.288-.713Q12.575 3 13 3h6q.825 0 1.413.587Q21 4.175 21 5v14q0 .825-.587 1.413Q19.825 21 19 21Z"/></svg>
+                                <span class="ml-3 text-sm">Login</span>
                             </a>
                         </li>
                         <!-- SINGLE MENU -->
@@ -161,7 +161,7 @@
                             <div class="relative overflow-hidden transition-all max-h-0 duration-600" x-ref="container6" x-bind:style="selected == 6 ? 'max-height: ' + $refs.container6.scrollHeight + 'px' : ''">
                                 <ul class="py-3 border rounded-md text-slate-500 flex flex-col space-y-3 px-4">
                                     <li @click="selected = false" class="transition-all duration-300 transform hover:translate-x-1 flex w-full">
-                                        <a href="/pages/error/403.html">403</a>
+                                        <a class="text-purple-500" href="/pages/error/403.html">403</a>
                                     </li>
                                     <li @click="selected = false" class="transition-all duration-300 transform hover:translate-x-1 flex w-full">
                                         <a href="/pages/error/404.html">404</a>
@@ -284,27 +284,118 @@
                 <div class="max-w-screen-xl mx-auto">
                     <div class="py-3 md:py-5 flex justify-between">
                         <div>
-                            <p class="text-sm font-medium text-slate-500">Login</p>
-                            <h1 class="text-slate-900 text-xl">Login forms components</h1>
+                            <p class="text-sm font-medium text-slate-500">Table components</p>
+                            <h1 class="text-slate-900 text-xl">Example table components</h1>
                         </div>
                     </div>
                     <!-- CONTENT -->
                     <div class="w-full bg-white rounded-md p-5">
-                        <!-- LOGIN v1 -->
-                        <div class="w-full">
-                            <div class="w-full flex justify-between items-center">
-                                <div class="w-full">
-                                    <h3 class="font-medium text-lg">Login forms</h3>
-                                    <p class="text-slate-500 text-sm">Login forms v1 - <span class="px-2 py-1 bg-green-100 text-green-700 text-xs rounded-full">PNG Preview</span></p>
-                                </div>
-                                <div class="flex items-center pt-5">
-                                    <a href="/pages/auth-v1/login.html" title="View page" class="w-10 h-10 rounded-md transition-all duration-300 bg-purple-500 hover:bg-purple-700 flex items-center justify-center">
-                                        <svg class="w-5 h-5 text-white" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M21.257 10.962c.474.62.474 1.457 0 2.076C19.764 14.987 16.182 19 12 19c-4.182 0-7.764-4.013-9.257-5.962a1.692 1.692 0 0 1 0-2.076C4.236 9.013 7.818 5 12 5c4.182 0 7.764 4.013 9.257 5.962Z"/><circle cx="12" cy="12" r="3"/></g></svg>
-                                    </a>
-                                </div>
+                        <div>
+                            <!-- SINGLE TABLE -->
+                            <p>Table auto width</p>
+                            <div id="table-component" class="w-full overflow-x-scroll mt-5">
+                                <table class="w-full table-auto rounded-md overflow-hidden">
+                                    <thead>
+                                        <tr class="text-left uppercase text-slate-500 bg-slate-100">
+                                            <th class="text-xs p-5 font-medium">ID</th>
+                                            <th class="text-xs p-5 font-medium">Name</th>
+                                            <th class="text-xs p-5 font-medium">Number</th>
+                                            <th class="text-xs p-5 font-medium">Email</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="divide-y">
+                                        <tr class="text-left">
+                                            <td class="text-sm p-5 text-slate-700">1</td>
+                                            <td class="text-sm p-5 text-slate-700">Han</td>
+                                            <td class="text-sm p-5 text-slate-700">08772222</td>
+                                            <td class="text-sm p-5 text-slate-700">han@mail.com</td>
+                                        </tr>
+                                        <tr class="text-left">
+                                            <td class="text-sm p-5 text-slate-700">1</td>
+                                            <td class="text-sm p-5 text-slate-700">Han</td>
+                                            <td class="text-sm p-5 text-slate-700">08772222</td>
+                                            <td class="text-sm p-5 text-slate-700">han@mail.com</td>
+                                        </tr>
+                                        <tr class="text-left">
+                                            <td class="text-sm p-5 text-slate-700">1</td>
+                                            <td class="text-sm p-5 text-slate-700">Han</td>
+                                            <td class="text-sm p-5 text-slate-700">08772222</td>
+                                            <td class="text-sm p-5 text-slate-700">han@mail.com</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
                             </div>
-                            <div class="w-full shadow-xl md:shadow-2xl relative rounded-lg overflow-hidden mt-5">
-                                <img src="/asset/img/preview/login.png" alt="">
+                        </div>
+                        <div class="mt-5">
+                            <!-- SINGLE TABLE -->
+                            <p>Table auto width with hover effect</p>
+                            <div id="table-component" class="w-full overflow-x-scroll mt-5">
+                                <table class="w-full table-auto rounded-md overflow-hidden">
+                                    <thead>
+                                        <tr class="text-left uppercase text-slate-500 bg-slate-100">
+                                            <th class="text-xs p-5 font-medium">ID</th>
+                                            <th class="text-xs p-5 font-medium">Name</th>
+                                            <th class="text-xs p-5 font-medium">Number</th>
+                                            <th class="text-xs p-5 font-medium">Email</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="divide-y">
+                                        <tr class="text-left transition-all duration-300 hover:bg-slate-50">
+                                            <td class="text-sm p-5 text-slate-700">1</td>
+                                            <td class="text-sm p-5 text-slate-700">Han</td>
+                                            <td class="text-sm p-5 text-slate-700">08772222</td>
+                                            <td class="text-sm p-5 text-slate-700">han@mail.com</td>
+                                        </tr>
+                                        <tr class="text-left transition-all duration-300 hover:bg-slate-50">
+                                            <td class="text-sm p-5 text-slate-700">1</td>
+                                            <td class="text-sm p-5 text-slate-700">Han</td>
+                                            <td class="text-sm p-5 text-slate-700">08772222</td>
+                                            <td class="text-sm p-5 text-slate-700">han@mail.com</td>
+                                        </tr>
+                                        <tr class="text-left transition-all duration-300 hover:bg-slate-50">
+                                            <td class="text-sm p-5 text-slate-700">1</td>
+                                            <td class="text-sm p-5 text-slate-700">Han</td>
+                                            <td class="text-sm p-5 text-slate-700">08772222</td>
+                                            <td class="text-sm p-5 text-slate-700">han@mail.com</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="mt-5">
+                            <!-- SINGLE TABLE -->
+                            <p>Table fixed width</p>
+                            <div id="table-component" class="w-full mt-5 overflow-x-auto">
+                                <table class="table-fixed rounded-t-md overflow-hidden">
+                                    <thead>
+                                        <tr class="text-left uppercase text-slate-500 bg-slate-100">
+                                            <th class="text-xs p-5 font-medium">ID</th>
+                                            <th class="text-xs p-5 font-medium">Name</th>
+                                            <th class="text-xs p-5 font-medium">Number</th>
+                                            <th class="text-xs p-5 font-medium">Email</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="divide-y">
+                                        <tr class="text-left">
+                                            <td class="text-sm p-5 text-slate-700">1</td>
+                                            <td class="text-sm p-5 text-slate-700">Han</td>
+                                            <td class="text-sm p-5 text-slate-700">08772222</td>
+                                            <td class="text-sm p-5 text-slate-700">han@mail.com</td>
+                                        </tr>
+                                        <tr class="text-left">
+                                            <td class="text-sm p-5 text-slate-700">1</td>
+                                            <td class="text-sm p-5 text-slate-700">Han</td>
+                                            <td class="text-sm p-5 text-slate-700">08772222</td>
+                                            <td class="text-sm p-5 text-slate-700">han@mail.com</td>
+                                        </tr>
+                                        <tr class="text-left">
+                                            <td class="text-sm p-5 text-slate-700">1</td>
+                                            <td class="text-sm p-5 text-slate-700">Han</td>
+                                            <td class="text-sm p-5 text-slate-700">08772222</td>
+                                            <td class="text-sm p-5 text-slate-700">han@mail.com</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
                     </div>
