@@ -25,4 +25,4 @@ The D-UI template implements a clean design in its HTML code, so that when creat
 <br />
 <br />
 
-<p align="center">Copyright ©2022 D-UI, All Rights Reserved.</p>
+<p align="center">Copyright ©2022 D-UI</p>
