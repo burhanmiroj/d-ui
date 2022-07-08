@@ -52,8 +52,8 @@
                         <!-- SINGLE MENU -->
                         <li class="relative text-sm">
                             <a href="/pages/documentation.html" class="flex items-center py-2.5">
-                                <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="currentColor" d="M15 4H6v16h12V7h-3V4ZM6 2h10l4 4v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2Zm2 9h8v2H8v-2Zm0 4h8v2H8v-2Z"/></svg>
-                                <span class="ml-3 text-sm">Documentation</span>
+                                <svg class="w-6 h-6 text-purple-500" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="currentColor" d="M15 4H6v16h12V7h-3V4ZM6 2h10l4 4v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2Zm2 9h8v2H8v-2Zm0 4h8v2H8v-2Z"/></svg>
+                                <span class="ml-3 text-sm text-purple-500">Documentation</span>
                             </a>
                         </li>
                     </ul>
@@ -161,7 +161,7 @@
                             <div class="relative overflow-hidden transition-all max-h-0 duration-600" x-ref="container6" x-bind:style="selected == 6 ? 'max-height: ' + $refs.container6.scrollHeight + 'px' : ''">
                                 <ul class="py-3 border rounded-md text-slate-500 flex flex-col space-y-3 px-4">
                                     <li @click="selected = false" class="transition-all duration-300 transform hover:translate-x-1 flex w-full">
-                                        <a class="text-purple-500" href="/pages/error/403.html">403</a>
+                                        <a href="/pages/error/403.html">403</a>
                                     </li>
                                     <li @click="selected = false" class="transition-all duration-300 transform hover:translate-x-1 flex w-full">
                                         <a href="/pages/error/404.html">404</a>
@@ -284,112 +284,13 @@
                 <div class="max-w-screen-xl mx-auto">
                     <div class="py-3 md:py-5 flex justify-between">
                         <div>
-                            <p class="text-sm font-medium text-slate-500">card components</p>
-                            <h1 class="text-slate-900 text-xl">Example card components</h1>
+                            <p class="text-sm font-medium text-slate-500">Cards</p>
+                            <h1 class="text-slate-900 text-xl">Card example</h1>
                         </div>
                     </div>
                     <!-- CONTENT -->
                     <div class="w-full bg-white rounded-md p-5">
-                        <!-- CARD -->
-                        <div class="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-5 gap-y-8">
-                            <!-- SINGLE -->
-                            <div class="w-full bg-white shadow-xl px-3 pb-3 rounded-md">
-                                <!-- Card header -->
-                                <div class="w-full h-32 transform -translate-y-1 object-cover rounded-md overflow-hidden bg-white shadow-lg">
-                                    <img class="w-full h-full" src="/asset/img/rect-example.png" alt="">
-                                </div>
-                                <div class="w-full mt-3">
-                                    <h1 class="font-medium py-2">Card title</h1>
-                                    <p class="text-sm text-slate-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, quia.</p>
-                                    <!-- SINGLE BUTTON -->
-                                    <button class="w-32 h-10 mt-3 rounded-md text-xs font-medium transition-all duration-300 bg-gradient-to-tr from-purple-500 to-purple-700 hover:from-purple-600 hover:to-purple-700 focus:ring-2 focus:ring-purple-300 text-white active:text-purple-300 flex justify-center items-center">
-                                        <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="currentColor" d="M10 18a7.952 7.952 0 0 0 4.897-1.688l4.396 4.396l1.414-1.414l-4.396-4.396A7.952 7.952 0 0 0 18 10c0-4.411-3.589-8-8-8s-8 3.589-8 8s3.589 8 8 8zm0-14c3.309 0 6 2.691 6 6s-2.691 6-6 6s-6-2.691-6-6s2.691-6 6-6z"/><path fill="currentColor" d="M11.412 8.586c.379.38.588.882.588 1.414h2a3.977 3.977 0 0 0-1.174-2.828c-1.514-1.512-4.139-1.512-5.652 0l1.412 1.416c.76-.758 2.07-.756 2.826-.002z"/></svg>
-                                        <span class="ml-2">Read more</span>
-                                    </button>
-                                </div>
-                                <!-- Card body -->
-                            </div>
-                            <div class="w-full bg-white shadow-xl px-3 pb-3 rounded-md">
-                                <!-- Card header -->
-                                <div class="w-full h-32 transform -translate-y-1 object-cover rounded-md overflow-hidden bg-white shadow-lg">
-                                    <img class="w-full h-full" src="/asset/img/rect-example.png" alt="">
-                                </div>
-                                <div class="w-full mt-3">
-                                    <h1 class="font-medium py-2">Card title</h1>
-                                    <p class="text-sm text-slate-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, quia.</p>
-                                    <!-- SINGLE BUTTON -->
-                                    <button class="w-32 h-10 mt-3 rounded-md text-xs font-medium transition-all duration-300 bg-gradient-to-tr from-purple-500 to-purple-700 hover:from-purple-600 hover:to-purple-700 focus:ring-2 focus:ring-purple-300 text-white active:text-purple-300 flex justify-center items-center">
-                                        <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="currentColor" d="M10 18a7.952 7.952 0 0 0 4.897-1.688l4.396 4.396l1.414-1.414l-4.396-4.396A7.952 7.952 0 0 0 18 10c0-4.411-3.589-8-8-8s-8 3.589-8 8s3.589 8 8 8zm0-14c3.309 0 6 2.691 6 6s-2.691 6-6 6s-6-2.691-6-6s2.691-6 6-6z"/><path fill="currentColor" d="M11.412 8.586c.379.38.588.882.588 1.414h2a3.977 3.977 0 0 0-1.174-2.828c-1.514-1.512-4.139-1.512-5.652 0l1.412 1.416c.76-.758 2.07-.756 2.826-.002z"/></svg>
-                                        <span class="ml-2">Read more</span>
-                                    </button>
-                                </div>
-                                <!-- Card body -->
-                            </div>
-                            <div class="w-full bg-white shadow-xl px-3 pb-3 rounded-md">
-                                <!-- Card header -->
-                                <div class="w-full h-32 transform -translate-y-1 object-cover rounded-md overflow-hidden bg-white shadow-lg">
-                                    <img class="w-full h-full" src="/asset/img/rect-example.png" alt="">
-                                </div>
-                                <div class="w-full mt-3">
-                                    <h1 class="font-medium py-2">Card title</h1>
-                                    <p class="text-sm text-slate-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, quia.</p>
-                                    <!-- SINGLE BUTTON -->
-                                    <button class="w-32 h-10 mt-3 rounded-md text-xs font-medium transition-all duration-300 bg-gradient-to-tr from-purple-500 to-purple-700 hover:from-purple-600 hover:to-purple-700 focus:ring-2 focus:ring-purple-300 text-white active:text-purple-300 flex justify-center items-center">
-                                        <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="currentColor" d="M10 18a7.952 7.952 0 0 0 4.897-1.688l4.396 4.396l1.414-1.414l-4.396-4.396A7.952 7.952 0 0 0 18 10c0-4.411-3.589-8-8-8s-8 3.589-8 8s3.589 8 8 8zm0-14c3.309 0 6 2.691 6 6s-2.691 6-6 6s-6-2.691-6-6s2.691-6 6-6z"/><path fill="currentColor" d="M11.412 8.586c.379.38.588.882.588 1.414h2a3.977 3.977 0 0 0-1.174-2.828c-1.514-1.512-4.139-1.512-5.652 0l1.412 1.416c.76-.758 2.07-.756 2.826-.002z"/></svg>
-                                        <span class="ml-2">Read more</span>
-                                    </button>
-                                </div>
-                                <!-- Card body -->
-                            </div>
-                            <div class="w-full bg-white shadow-xl px-3 pb-3 rounded-md">
-                                <!-- Card header -->
-                                <div class="w-full h-32 transform -translate-y-1 object-cover rounded-md overflow-hidden bg-white shadow-lg">
-                                    <img class="w-full h-full" src="/asset/img/rect-example.png" alt="">
-                                </div>
-                                <div class="w-full mt-3">
-                                    <h1 class="font-medium py-2">Card title</h1>
-                                    <p class="text-sm text-slate-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, quia.</p>
-                                    <!-- SINGLE BUTTON -->
-                                    <button class="w-32 h-10 mt-3 rounded-md text-xs font-medium transition-all duration-300 bg-gradient-to-tr from-purple-500 to-purple-700 hover:from-purple-600 hover:to-purple-700 focus:ring-2 focus:ring-purple-300 text-white active:text-purple-300 flex justify-center items-center">
-                                        <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="currentColor" d="M10 18a7.952 7.952 0 0 0 4.897-1.688l4.396 4.396l1.414-1.414l-4.396-4.396A7.952 7.952 0 0 0 18 10c0-4.411-3.589-8-8-8s-8 3.589-8 8s3.589 8 8 8zm0-14c3.309 0 6 2.691 6 6s-2.691 6-6 6s-6-2.691-6-6s2.691-6 6-6z"/><path fill="currentColor" d="M11.412 8.586c.379.38.588.882.588 1.414h2a3.977 3.977 0 0 0-1.174-2.828c-1.514-1.512-4.139-1.512-5.652 0l1.412 1.416c.76-.758 2.07-.756 2.826-.002z"/></svg>
-                                        <span class="ml-2">Read more</span>
-                                    </button>
-                                </div>
-                                <!-- Card body -->
-                            </div>
-                            <div class="w-full bg-white shadow-xl px-3 pb-3 rounded-md">
-                                <!-- Card header -->
-                                <div class="w-full h-32 transform -translate-y-1 object-cover rounded-md overflow-hidden bg-white shadow-lg">
-                                    <img class="w-full h-full" src="/asset/img/rect-example.png" alt="">
-                                </div>
-                                <div class="w-full mt-3">
-                                    <h1 class="font-medium py-2">Card title</h1>
-                                    <p class="text-sm text-slate-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, quia.</p>
-                                    <!-- SINGLE BUTTON -->
-                                    <button class="w-32 h-10 mt-3 rounded-md text-xs font-medium transition-all duration-300 bg-gradient-to-tr from-purple-500 to-purple-700 hover:from-purple-600 hover:to-purple-700 focus:ring-2 focus:ring-purple-300 text-white active:text-purple-300 flex justify-center items-center">
-                                        <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="currentColor" d="M10 18a7.952 7.952 0 0 0 4.897-1.688l4.396 4.396l1.414-1.414l-4.396-4.396A7.952 7.952 0 0 0 18 10c0-4.411-3.589-8-8-8s-8 3.589-8 8s3.589 8 8 8zm0-14c3.309 0 6 2.691 6 6s-2.691 6-6 6s-6-2.691-6-6s2.691-6 6-6z"/><path fill="currentColor" d="M11.412 8.586c.379.38.588.882.588 1.414h2a3.977 3.977 0 0 0-1.174-2.828c-1.514-1.512-4.139-1.512-5.652 0l1.412 1.416c.76-.758 2.07-.756 2.826-.002z"/></svg>
-                                        <span class="ml-2">Read more</span>
-                                    </button>
-                                </div>
-                                <!-- Card body -->
-                            </div>
-                            <div class="w-full bg-white shadow-xl px-3 pb-3 rounded-md">
-                                <!-- Card header -->
-                                <div class="w-full h-32 transform -translate-y-1 object-cover rounded-md overflow-hidden bg-white shadow-lg">
-                                    <img class="w-full h-full" src="/asset/img/rect-example.png" alt="">
-                                </div>
-                                <div class="w-full mt-3">
-                                    <h1 class="font-medium py-2">Card title</h1>
-                                    <p class="text-sm text-slate-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, quia.</p>
-                                    <!-- SINGLE BUTTON -->
-                                    <button class="w-32 h-10 mt-3 rounded-md text-xs font-medium transition-all duration-300 bg-gradient-to-tr from-purple-500 to-purple-700 hover:from-purple-600 hover:to-purple-700 focus:ring-2 focus:ring-purple-300 text-white active:text-purple-300 flex justify-center items-center">
-                                        <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="currentColor" d="M10 18a7.952 7.952 0 0 0 4.897-1.688l4.396 4.396l1.414-1.414l-4.396-4.396A7.952 7.952 0 0 0 18 10c0-4.411-3.589-8-8-8s-8 3.589-8 8s3.589 8 8 8zm0-14c3.309 0 6 2.691 6 6s-2.691 6-6 6s-6-2.691-6-6s2.691-6 6-6z"/><path fill="currentColor" d="M11.412 8.586c.379.38.588.882.588 1.414h2a3.977 3.977 0 0 0-1.174-2.828c-1.514-1.512-4.139-1.512-5.652 0l1.412 1.416c.76-.758 2.07-.756 2.826-.002z"/></svg>
-                                        <span class="ml-2">Read more</span>
-                                    </button>
-                                </div>
-                                <!-- Card body -->
-                            </div>
-                        </div>
+                        Coming soon!😎
                     </div>
                 </div>
             </div>
@@ -404,6 +305,5 @@
     <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.8.0/chart.min.js" integrity="sha512-sW/w8s4RWTdFFSduOTGtk4isV1+190E/GghVffMA9XczdJ2MDzSzLEubKAs5h0wzgSJOQTRYyaz73L3d6RtJSg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="/asset/js/main.js"></script>
-    <script src="/asset/js/auth.js"></script>
 </body>
 </html>
